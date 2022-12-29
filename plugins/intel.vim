@@ -71,7 +71,7 @@ lua <<EOF
     }
   })
 
-  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).       
+  -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
   cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
@@ -89,6 +89,5 @@ augroup LspOverrides
     autocmd!
     autocmd User PlugLoaded call SetupTreesitter()
     autocmd User PlugLoaded call SetupLsp()
-    autocmd User PlugLoaded call SetupCompletion()
+    "autocmd User PlugLoaded call SetupCompletion()"
 augroup END
-
